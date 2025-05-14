@@ -3,7 +3,30 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <title>Page Name</title>
+
         <style>
+            .navdiv{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .navlinks li{
+                display: inline-block;
+                padding: 0px 20px;
+            }
+
+            .titlecontent{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .heading h1{
+                display: flex;
+                align-items: center;
+            }
         </style>
 
     </head>
@@ -11,11 +34,10 @@
 
     <body>
 
-        <div class="container">
-            
-        <nav class="navbar">
+
             <div class="navdiv">
-                <div class="logo"><a href="homepage.html">LOGO</a></div>
+                <div class="logo"><a href="homepage.html">VOYAGE</a></div>
+                <div class="navlinks">
                 <ul>
                     <li><a href="aboutpage.html">About</a></li>
                     <li><a href="historypage.html">History</a></li>
@@ -23,16 +45,28 @@
                     <li><a href="templepage.html">Temple</a></li>
                     <li><a href="travelpage.html">Travel</a></li>
                 </ul>
+            </div>
                 <div class="search"><a href="#">Search</a></div>
             </div>
-        </nav>
-        
-        <div class="tilecontent"></div>
-            <h1> DISCOVER BAGAN</h1>
-            <img src="imagesfile/Bagan.jpg"style="width: 100%;">
+
+
+            <div class="titlecontent">
+            <div class="heading">    
+            <h1>DISCOVER BAGAN</h1>
         </div>
+
+            <div class="backgroundimage">
+                <img src="imagesfile/Bagan.jpg"style="width: 100%;">
+             </div>
+        </div>
+
         <hr>
+
+
+        <div class="container">
+            
         
+
 
         <div class="aboutsection">
             <h2> About</h2>
