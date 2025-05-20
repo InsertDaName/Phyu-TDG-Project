@@ -43,6 +43,17 @@
                 text-decoration: none;
             }
 
+            .about{
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-template-rows: repeat(1fr);
+                grid-column: 0px;
+                grid-row-gap: 0px;
+            }
+
+            .aboutsection1{ grid-area: 1/1/2/2;}
+            .aboutsection2{ grid-area: 1/2/2/3;}
+
         </style>
 
     </head>
@@ -80,18 +91,18 @@
         <hr>
 
 
-        <div class="container">
+        <div class="about">
             
         
 
 
-        <div class="aboutsection">
+        <div class="aboutsection1">
             <h2> About</h2>
             <p>Lorem Ipsum</p>
+            <img src="imagesfile/Temple_n_trees.jpg" width="50%">
+        </div> 
 
-            <img src="imagesfile/Temple_n_trees.jpg"> 
-
-            <h2>HEADING</h2>
+            <div class="aboutsection2">
             <p>Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus 
             animi a culpa quisquam ut mollitia placeat.
              Qui laboriosam adipisci est assumenda laboriosam vel asperiores corporis. 
@@ -100,6 +111,7 @@
              Et mollitia nihil est fugiat repellendus aut voluptatem dolores ut facilis mollitia 
              aut vitae quidem. Qui omnis fuga aut quibusdam molestiae eum error accusantium.
             </p>
+            </div>
 
         </div>
 
@@ -109,18 +121,20 @@
             <h2>Topics of Bagan</h2>
             
             <div class="history">
-                <img src="imagesfile/BaganErapaintingofThingyan.jpg">
+                <img src="imagesfile/BaganErapaintingofThingyan.jpg" width="50%">
                 <h2>HISTORY</h2>
             </div>
     
             <div class="culture">
-                <img src="imagesfile/puppets.jpg">
+                <img src="imagesfile/puppets.jpg" wdth="50%">
                 <h2>CULTURE</h2>
             </div>
     
             <div class="temples">
-                <img src="imagesfile/templeimg1.jpg">
+                <img src="imagesfile/templeimg1.jpg" width="50%">
                 <h2>TEMPLES</h2>
+            </div>
+
             </div>
     
             <div class="travel">
