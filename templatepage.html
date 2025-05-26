@@ -18,7 +18,8 @@
             .header{
                 min-height: 100vh;
                 width: 100%;
-                background-image: linear-gradient(rgba(117, 120, 66, 0.7), rgba(28, 34, 58, 0.065)), url(imagesfile/Bagan.jpg);
+                background-image: linear-gradient(rgba(52, 53, 39, 0.11),
+                 rgba(7, 9, 15, 0.418)), url(imagesfile/Bagan.jpg);
                 background-position: center;
                 background-size: cover;
                 position: relative;                
@@ -38,7 +39,20 @@
                 display: inline-block;
                 padding: 0px 20px;
                 color: white;
+            }
 
+            .navlinks ul li::after{
+                content: '';
+                width: 0%;
+                height: 2px;
+                background: #C3492C;
+                display: block;
+                margin: auto;
+                transition: 0.5s;
+            }
+
+            .navlinks ul li:hover::after {
+                width: 100%;
             }
 
             .titlecontent{
@@ -47,14 +61,15 @@
                 flex-wrap: wrap;
             }
 
-            .navlinks li::after{
-                content: '';
-                width: 100%;
-            }
-
-            .heading h1{
-                display: flex;
-                align-items: center;
+            .titlecontent{
+                width: 90%;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-10%,-70%);
+                
             }
             
             a{
