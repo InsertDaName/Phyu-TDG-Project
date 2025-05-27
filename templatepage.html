@@ -10,75 +10,9 @@
         <title>Template Page</title>
 
         <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-
-            .header{
-                min-height: 100vh;
-                width: 100%;
-                background-image: linear-gradient(rgba(52, 53, 39, 0.11),
-                 rgba(7, 9, 15, 0.418)), url(imagesfile/Bagan.jpg);
-                background-position: center;
-                background-size: cover;
-                position: relative;                
-
-            }
-   
-            .navdiv{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-
-
-            }
-
-            .navlinks li{
-                display: inline-block;
-                padding: 0px 20px;
-                color: white;
-            }
-
-            .navlinks ul li::after{
-                content: '';
-                width: 0%;
-                height: 2px;
-                background: #C3492C;
-                display: block;
-                margin: auto;
-                transition: 0.5s;
-            }
-
-            .navlinks ul li:hover::after {
-                width: 100%;
-            }
-
-            .titlecontent{
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-
-            .titlecontent{
-                width: 90%;
-                color: white;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                text-align: center;
-                transform: translate(-10%,-70%);
-                
-            }
             
-            a{
-                text-decoration: none;
-                color: white;
-                font-size: 20px;
-            }
 
-            .about{
+            /* .about{
                 display: grid;
                 grid-template-columns: repeat(5,1fr);
                 grid-template-rows: repeat(1fr);
@@ -87,7 +21,21 @@
             }
 
             .aboutsection1{ grid-area: 1/1/2/2;}
-            .aboutsection2{ grid-area: 1/2/2/3;}
+            .aboutsection2{ grid-area: 1/2/2/3;} */
+
+            .about{
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 40px;
+                width: 90%;
+                margin: 4rem auto 10;
+            }
+
+            .about img{
+
+                width: 80%;
+            }
 
         </style>
 
@@ -135,7 +83,7 @@
         <div class="aboutsection1">
             <h2> About</h2>
             <p>Lorem Ipsum</p>
-            <img src="imagesfile/Temple_n_trees.jpg" width="50%">
+            <img src="imagesfile/Temple_n_trees.jpg" >
         </div> 
 
             <div class="aboutsection2">
