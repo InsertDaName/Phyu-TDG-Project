@@ -9,8 +9,7 @@
         content="width=device-width, initial -scale =1.0">
         <title>Template Page</title>
 
-        <style>
-        
+        <style> 
         .header{
             min-height: 100vh;
             width: 100%;
@@ -21,21 +20,7 @@
             position: relative;                
         
         }
-        
-            
-
-            /* .about{
-                display: grid;
-                grid-template-columns: repeat(5,1fr);
-                grid-template-rows: repeat(1fr);
-                grid-column: 0px;
-                grid-row-gap: 0px;
-            }
-
-            .aboutsection1{ grid-area: 1/1/2/2;}
-            .aboutsection2{ grid-area: 1/2/2/3;} */
-
-            .about{
+            .homepage-about{
                 background-color: white;
                 display: flex;
                 justify-content: space-between;
@@ -44,12 +29,17 @@
                 margin: 4rem auto 10;
             }
 
-            .about img{
+            .homepage-about img{
 
                 width: 80%;
             }
             
-
+            .homepage-section2{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 100px;
+            }
         </style>
 
     </head>
@@ -91,15 +81,15 @@
 
 
 <!-- about heading with image and text on side -->
-        <div class="about">
+        <div class="homepage-about">
             
-        <div class="aboutsection1">
+        <div class="homepage-aboutsection1">
             <h2> About</h2>
             <p>Lorem Ipsum</p>
             <img src="imagesfile/Temple_n_trees.jpg" >
         </div> 
 
-            <div class="aboutsection2">
+            <div class="homepage-aboutsection2">
             <p>Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus 
             animi a culpa quisquam ut mollitia placeat.
              Qui laboriosam adipisci est assumenda laboriosam vel asperiores corporis. 
@@ -117,30 +107,41 @@
 
 
 <!-- topic section -->
-        <div class="section2">
-            <h2>Topics of Bagan</h2>
+<h2>Topics of Bagan</h2>
+        <div class="homepage-section2">
+
             
-            <div class="history">
-                <img src="imagesfile/BaganErapaintingofThingyan.jpg" width="50%">
+            <div class="homepage-card">
+                <img src="imagesfile/BaganErapaintingofThingyan.jpg" >
+                <div class="content">
+
                 <h2>HISTORY</h2>
             </div>
+            </div>
     
-            <div class="culture">
-                <img src="imagesfile/puppets.jpg" wdth="50%">
+            <div class="homepage-card">
+                <img src="imagesfile/puppets.jpg" >
+                <div class="content">
                 <h2>CULTURE</h2>
             </div>
+            </div>
     
-            <div class="temples">
-                <img src="imagesfile/templeimg1.jpg" width="50%">
+            <div class="homepage-card">
+                <img src="imagesfile/templeimg1.jpg" >
+                <div class="content">
                 <h2>TEMPLES</h2>
             </div>
-
             </div>
+
     
-            <div class="travel">
+            <div class="homepage-card">
                 <img src="imagesfile/transport.jpg">
+                <div class="content">
                 <h2>TRAVEL</h2>
             </div>
+            </div>
+        </div>
+
             <hr>
         </body>
     
