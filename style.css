@@ -111,7 +111,6 @@ a{
 footer {
     width: 100%;
     position: absolute;
-    bottom: 0;
     background: linear-gradient(to bottom, #B4B396, #423C36);
     color: #f0f0f0;
     padding: 100px 0 30px;
