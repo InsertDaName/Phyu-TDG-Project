@@ -153,6 +153,15 @@ footer {
 .col ul li {
     list-style: none;
     margin-bottom: 12px;
+
+    color: white;
+    transition: 0.5s;
+}
+
+.subcol  :hover{
+    color: #C3492C;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 .col ul li a {
