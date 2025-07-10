@@ -1,31 +1,71 @@
 * {
+        margin: 0;
     padding: 0;
-    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    background: white;
+    color: #333;
+}
 
-
-.navdiv{
+.navdiv {
     display: flex;
+        align-items: baseline;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    transform: translate(0%,100%);
-
-
-}
-
-.navlinks li{
-    display: inline-block;
-    padding: 0px 20px;
-    color: white;
-}
-
-.logo {
+    padding: 30px 80px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
     
-    transform: translate(20%,0%);
-    color: white;
+}
+
+.navlinks ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    /* margin: 0;
+    padding: 0; */
+
+
+}
+
+.navlinks ul li a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    /* line-height: 1.2; */
+}
+
+.navlinks ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #C3492C;
+    display: block;
+    margin: auto;
     transition: 0.5s;
+}
+
+.navlinks ul li a:hover::after{
+    width: 100%;
+}
+
+
+.logo h1 {
+    font-family: 'Playfair Display',serif;
+    font-size: 32px;
+    color: #fff;
+    transition: 0.5s;
+    /* margin: 0;
+    line-height: 1.2; */
+
+}
+.logo a{
+    text-decoration: none;
 }
 
 .logo  :hover{
@@ -34,45 +74,31 @@
     transition: 0.2s;
 }
 
-
-.navlinks ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #C3492C;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+.search a {
+    color: #fff;
+    font-size: 18px;
+    /* line-height: 1.2; */
 
 }
 
-.navlinks ul li:hover::after {
-    width: 100%;
-}
 
 .titlecontent{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.titlecontent{
-
-    color: white;
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%,-60%);
     text-align: center;
-    transform: translate(-50%,-70%);
-    font-size: xx-large;
-    
+
 }
 
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+.titlecontent h1 {
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
 }
+
+
 
 .homepage-card {
 

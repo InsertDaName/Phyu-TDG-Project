@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/abd7cf25bc.js" crossorigin="anonymous"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
 
 
         <meta charset="UTF-8">
@@ -11,14 +12,15 @@
         <title>Discover Bagan</title>
 
         <style> 
+        /* Homepage Header */
         .header{
+            
             min-height: 100vh;
-            width: 100%;
-            background-image: linear-gradient(rgba(52, 53, 39, 0.11),
-             rgba(7, 9, 15, 0.418)), url(imagesfile/Bagan.jpg);
-            background-position: center;
+            background-image: linear-gradient(rgba(52, 53, 39, 0.3),
+             rgba(7, 9, 15, 0.5)), url(imagesfile/Bagan.jpg);
             background-size: cover;
-            position: relative;                
+            background-position: center;
+            position: relative;
         
         }
             .homepage-about{
@@ -49,8 +51,6 @@
     <body>
 <!-- Navigation bar -->
         <div class="header">
-
-
             <div class="navdiv">
                 <div class="logo"><a href="homepage.html"><h1>VOYAGE</h1></a></div>
                 <div class="navlinks">
@@ -68,29 +68,27 @@
 
 
             <div class="titlecontent">
-
-            <div class="heading">    
             <h1>DISCOVER BAGAN</h1>
         </div>
 
         </div>
 
-        </div>
+
 
 
 
 
 
 <!-- about heading with image and text on side -->
-        <div class="homepage-about">
+        <section class="homepage-about">
             
-        <div class="homepage-aboutsection1">
-            <h2> About</h2>
-            <p>Lorem Ipsum</p>
-            <img src="imagesfile/Temple_n_trees.jpg" >
+        <div class="homepage-about-left">
+            <h2>TIME LESS BEAUTY OF BAGAN</h2>
+            <p class="subheading">An insight into the incredible experience in the world</p>
+            <img src="imagesfile/Temple_n_trees.jpg" alt="Bagan" >
         </div> 
 
-            <div class="homepage-aboutsection2">
+            <div class="homepage-about-right">
             <p>Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus 
             animi a culpa quisquam ut mollitia placeat.
              Qui laboriosam adipisci est assumenda laboriosam vel asperiores corporis. 
@@ -99,48 +97,54 @@
              Et mollitia nihil est fugiat repellendus aut voluptatem dolores ut facilis mollitia 
              aut vitae quidem. Qui omnis fuga aut quibusdam molestiae eum error accusantium.
             </p>
+            <button class="enter-btn">ENTER</button>
             </div>
-
-        </div>
+        </section>
 
 
 
 
 <!-- topic section -->
+ <section class="topics-section">
 <h2>Topics of Bagan</h2>
-        <div class="homepage-section2">
+        <div class="homepage-section-topics">
 
-            
-            <div class="homepage-card">
-                <img src="imagesfile/BaganErapaintingofThingyan.jpg" >
-                <div class="card-content">
+  <!-- 1st row: HISTORY & CULTURE -->
+  <div class="row-of-cards">
+    <div class="homepage-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="imagesfile/BaganErapaintingofThingyan.jpg" alt="History">
+      <div class="card-content">
+        <a href="historypage.html" class="homepagebutton">HISTORY</a>
+      </div>
+    </div>
 
-                    <a href="historypage.html"class="homepagebutton"><h2>HISTORY</h2></a>
-            </div>
-            </div>
+    <div class="homepage-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="imagesfile/puppets.jpg" alt="Culture">
+      <div class="card-content">
+        <a href="culturepage.html" class="homepagebutton">CULTURE</a>
+      </div>
+    </div>
+  </div>
     
-            <div class="homepage-card">
-                <img src="imagesfile/puppets.jpg" >
-                <div class="card-content">
-                <a href="culturepage.html"class="homepagebutton"><h2>CULTURE</h2></a>
-            </div>
-            </div>
-    
-            <div class="homepage-card">
-                <img src="imagesfile/templeimg1 - Copy.jpg" >
-                <div class="card-content">
-                    <a href="templepage.html"class="homepagebutton"><h2>Temples</h2></a>
-            </div>
-            </div>
+   <!-- 2nd row: TRAVEL & TEMPLES -->
+  <div class="row-of-cards">
+    <div class="homepage-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="imagesfile/transport - Copy.jpg" alt="Travel">
+      <div class="card-content">
+        <a href="travelpage.html" class="homepagebutton">TRAVEL</a>
+      </div>
+    </div>
 
-    
-            <div class="homepage-card">
-                <img src="imagesfile/transport - Copy.jpg">
-                <div class="card-content">
-                    <a href="travelpage.html" class="homepagebutton"><h2>Travel</h2></a>
-            </div>
-            </div>
+    <div class="homepage-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="imagesfile/templeimg1 - Copy.jpg" alt="Temples">
+      <div class="card-content">
+        <a href="templepage.html" class="homepagebutton">TEMPLES</a>
+      </div>
+    </div>
+  </div>
+
         </div>
+        </section>
 
 
         </body>
