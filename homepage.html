@@ -22,28 +22,8 @@
             background-size: cover;
             background-position: center;
             position: relative;
-        
         }
-            /* .homepage-about{
-                background-color: white;
-                display: flex;
-                justify-content: space-between;
-                padding: 40px;
-                width: 90%;
-                margin: 4rem auto 10;
-            }
 
-            .homepage-about img{
-
-                width: 80%;
-            }
-            
-            .homepage-section2{
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-top: 100px;
-            } */
         </style>
 
     </head>
@@ -68,8 +48,8 @@
                 <!-- <div class="search"><a href="#">Search</a></div> -->
 
 <!-- search bar -->
-<button class="openbtn" onclick="">Open Search Box</button>
-      <div class="search">
+<!-- <button class="openbtn" onclick="">Open Search Box</button>
+      <div class="search" id="SearchOverlay">
         <div class="search-content">
           <form>
             <input type="text" name="search" placeholder="Search...">
@@ -77,6 +57,16 @@
           </form>
         </div>
         <span class="closebtn" onclick="" class="" title="close">X</span>
+      </div> -->
+      <button class="openbtn" onclick="openSearch()"><i class="fa fa-search"></i></button>
+      <div class="search" id="SearchOverlay">
+        <div class="search-content">
+          <form>
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <span class="closebtn" onclick="closeSearch()" class="" title="close">X</span>
       </div>
 
             </div>
@@ -219,7 +209,11 @@
 
   <script>
     function openSearch(){
-      document.getElementById("").style.display="block";
+      document.getElementById("SearchOverlay").style.display="block";
+    }
+
+    function closeSearch(){
+      document.getElementById("SearchOverlay").style.display="none";
     }
   </script>
 

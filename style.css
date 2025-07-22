@@ -75,7 +75,7 @@ body {
 }
 
 /* style open button */
-.openbtn {
+/* .openbtn {
     position: absolute;
     background-color: #c3492c;
     border: none;
@@ -91,9 +91,9 @@ body {
     background-color: #a53e24;
     color: white;
     
-}
+} */
 /* Seach overlay */
-.search{
+/* .search{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -111,10 +111,10 @@ body {
     margin: auto;
     margin-top: 30px;
     text-align: center;
-}
+} */
 
 /* create the close */
-.search .closebtn{
+/* .search .closebtn{
     position: absolute;
     top: 25px;
     right: 50px;
@@ -153,6 +153,82 @@ body {
 
 .search button:hover {
     background-color: #a53e24;
+} */
+
+/* creating the search overlay*/
+.openbtn{
+    position: absolute;
+    background-color: #C3492C;
+    border: none;
+    padding: 14px 20px;
+    top: 40px;
+    right: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.openbtn:hover {
+    background-color: #a53e24;
+    color: white;
+}
+.search {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+.search-content {
+    position: relative;
+    top: 40%;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* creating the close button */
+.search .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+}
+.search .closebtn:hover {
+    color: #a53e24;
+}
+
+/* styling the search field */
+.search input[type=text] {
+    float: left;
+    width: 80%;
+    border: none;
+    padding: 17px;
+    font-size: 17px;
+    background-color: white;
+}
+
+.search input[type=text]:hover {
+    background-color: #f2f2f2;
+}
+
+/* styling seach button */
+.search button {
+    float: left;
+    width: 20%;
+    font-size: 17px;
+    padding: 17px;
+    background-color: #c3492c;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 .titlecontent{
