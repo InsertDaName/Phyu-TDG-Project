@@ -2,25 +2,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/abd7cf25bc.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
         <meta charset="UTF-8">
         <meta name="viewport"
         content="width=device-width, initial -scale =1.0">
-        <title>Template Page</title>
+        <title>Discover Bagan</title>
 
-        <style>
+        <style> 
+        /* Homepage Header */
         .header{
+            
             min-height: 100vh;
-            width: 100%;
-            background-image: linear-gradient(rgba(52, 53, 39, 0.11),
-             rgba(7, 9, 15, 0.418)), url(imagesfile/Bagan.jpg);
-            background-position: center;
+            background-image: linear-gradient(rgba(52, 53, 39, 0.3),
+             rgba(7, 9, 15, 0.5)), url(imagesfile/Bagan.jpg);
             background-size: cover;
-            position: relative;                
-        
+            background-position: center;
+            position: relative;
         }
-
 
         </style>
 
@@ -28,11 +30,10 @@
 
 
     <body>
-<!-- Navigation bar -->
+
+<!-- Header and Navigation bar -->
         <div class="header">
-
-
-            <div class="navdiv">
+            <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
                 <div class="logo"><a href="homepage.html"><h1>VOYAGE</h1></a></div>
                 <div class="navlinks">
                 <ul>
@@ -44,19 +45,55 @@
                 </ul>
 
             </div>
-                <div class="search"><a href="#">Search</a></div>
+                <!-- <div class="search"><a href="#">Search</a></div> -->
+
+<!-- search bar -->
+
+      <button class="openbtn" onclick="openSearch()"><i class="fa fa-search"></i></button>
+      <div class="search" id="SearchOverlay">
+        <div class="search-content">
+          <form>
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <span class="closebtn" onclick="closeSearch()" class="" title="close">X</span>
+      </div>
+
             </div>
 
 
-            <div class="titlecontent">
+            <div class="about-this-page-header">
+            <h1 data-aos="fade-up" data-aos-duration="3000">ABOUT THIS SITE</h1>
+            <p data-aos="fade-up" data-aos-duration="3000">
+        Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus animi...
+        Et mollitia nihil est fugiat repellendus aut voluptatem dolores ut facilis mollitia aut vitae quidem.
+            </p>
 
-            <div class="heading">    
-            <h1>DISCOVER BAGAN</h1>
+                <div class="about-this-page-social-icons" data-aos="fade-up" data-aos-duration="3000">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
         </div>
 
         </div>
+    
+    <!-- Animation script -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-        </div>
+  <script>
+    function openSearch(){
+      document.getElementById("SearchOverlay").style.display="block";
+    }
 
-        </body>
+    function closeSearch(){
+      document.getElementById("SearchOverlay").style.display="none";
+    }
+  </script>
+
+    </body>
 </html>

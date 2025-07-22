@@ -438,3 +438,171 @@ hr {
     }
 }
 
+
+/* Timeline Section */
+.timeline-section {
+    padding: 80px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-intro {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.timeline-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-10px);
+}
+
+.timeline-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.timeline-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+/* Geography Section */
+.geography-section {
+    background-color: #B4B396;
+    padding: 80px 10%;
+    color: #222;
+    font-family: 'Lato', sans-serif;
+}
+
+.geography-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.geography-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map-container img {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.geography-description {
+    flex: 1;
+    min-width: 300px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Text Blocks Section */
+.text-blocks-section {
+    background-color: #f8f8f8;
+    padding: 60px 10%;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.text-blocks-section p {
+    margin-bottom: 20px;
+}
+
+
+/* about this page */
+.about-this-page-header{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    text-align: center;
+
+}
+.about-this-page-header h1 {
+        font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.about-this-page-header p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #eee;
+    margin-bottom: 40px;
+}
+
+.about-this-page-social-icons .fa-brands {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #f0f0f0;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.about-this-page-social-icons .fa-solid {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #f0f0f0;
+    margin-right: 15px;
+    cursor: pointer;
+}

@@ -22,8 +22,10 @@
             background-size: cover;
             background-position: center;
             position: relative;
-        }
 
+            mask-image: linear-gradient(black,transparent);
+            -webkit-mask-image: linear-gradient(black 68%,transparent 100%);
+        }
         </style>
 
     </head>
@@ -48,16 +50,7 @@
                 <!-- <div class="search"><a href="#">Search</a></div> -->
 
 <!-- search bar -->
-<!-- <button class="openbtn" onclick="">Open Search Box</button>
-      <div class="search" id="SearchOverlay">
-        <div class="search-content">
-          <form>
-            <input type="text" name="search" placeholder="Search...">
-            <button type="sumbit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
-        <span class="closebtn" onclick="" class="" title="close">X</span>
-      </div> -->
+
       <button class="openbtn" onclick="openSearch()"><i class="fa fa-search"></i></button>
       <div class="search" id="SearchOverlay">
         <div class="search-content">
