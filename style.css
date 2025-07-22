@@ -233,7 +233,7 @@ body {
 /* Topiv section */
 .topics-section {
     padding: 60px 80px;
-    text-align: left;
+    text-align: center;
 }
 
 .topics-section h2 {
@@ -245,7 +245,7 @@ body {
 .homepage-section-topics {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     gap: 30px;
     padding: 60px 80px;
 }
@@ -253,7 +253,7 @@ body {
 /* Row of cards */
 .row-of-cards{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -292,6 +292,7 @@ body {
 .card-content {
     font-size: 30px;
     margin-bottom: 8px;
+    /* text-align: center; */
 }
 
 .homepagebutton {
@@ -305,6 +306,10 @@ body {
     margin-top: 16px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.homepagebutton:hover {
+    background-color: #a53e24;
 }
 .homepage-card:hover {
     transform: scale(1.15) !important;
@@ -606,3 +611,4 @@ hr {
     margin-right: 15px;
     cursor: pointer;
 }
+
