@@ -612,3 +612,46 @@ hr {
     cursor: pointer;
 }
 
+/* Temple Page Styles */
+.temple-section {
+    padding: 80px 10px;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+.temple-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.temple-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.temple-section .subheading {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.temple-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.temple-gallery img {
+    width: 32%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
