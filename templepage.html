@@ -10,6 +10,8 @@
         <meta charset="UTF-8">
         <meta name="viewport"
         content="width=device-width, initial -scale =1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <title>Temples</title>
 
         <style> 
@@ -47,7 +49,6 @@
                 </ul>
 
             </div>
-                <!-- <div class="search"><a href="#">Search</a></div> -->
 
 <!-- search bar -->
 
@@ -79,9 +80,9 @@
 
     <!-- Temple Main Gallery -->
     <div class="temple-gallery">
-        <img src="imagesfile/thewallsofthatbyinnyutemple.jpg" alt="Thatbyinnyu Temple View 1">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 1">
         <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 2">
-        <img src="imagesfile/pexels-lee-sheng-dan-25738568-13798001.jpg" alt="Thatbyinnyu Temple View 3">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 3">
     </div>
 
     <p>“The temples in Bagan were primarily constructed using fired bricks and mud-based mortars with vegetal binders; some structures of temples are also incorporating sandstone for reinforcement.”
@@ -98,9 +99,9 @@
     <p class="subheading">Lorem ipsum dolor sit amet. Vel veniam earum</p>
 
     <div class="temple-gallery">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 1">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 2">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 3">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 1">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 2">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 3">
     </div>
 
     <p>Gu-style (hollow temples) have a vaulted indoor chamber and point arches. his technique of vaulting is thought to have been developed in Bagan in the 11th century.
@@ -114,9 +115,9 @@
     <p class="subheading">Lorem ipsum dolor sit amet. Vel veniam earum</p>
 
     <div class="temple-gallery">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 1">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 2">
-        <img src="imagesfile/" alt="Thatbyinnyu Temple View 3">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 1">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 2">
+        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 3">
     </div>
 
     <p>Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus animi a culpa quisquam ut mollitia placeat.</p>
@@ -174,6 +175,7 @@
     AOS.init();
   </script>
 
+<!-- Script open and close search bar -->
   <script>
     function openSearch(){
       document.getElementById("SearchOverlay").style.display="block";
@@ -182,6 +184,30 @@
     function closeSearch(){
       document.getElementById("SearchOverlay").style.display="none";
     }
+  </script>
+
+  <script>
+    const lightbox = document.createElement('div')
+    lightbox.id = 'lightbox'
+    document.body.appendChild(lightbox)
+
+    const images = document.querySelectorAll('img')
+    images.forEach(image => {
+        image.addEventListener('click', e=>{
+            lightbox.classList.add('active')
+            const img = document.createElement('img')
+            img.src = image.src
+            while (lightbox.firstChild){
+                lightbox.removeChild(lightbox.firstChild)
+            }
+            lightbox.appendChild(img)
+        })
+    })
+
+    lightbox.addEventListener('click', e =>{
+        if (e.target !== e.currentTarget) return
+        lightbox.classList.remove('active')
+    })
   </script>
 
     </body>
