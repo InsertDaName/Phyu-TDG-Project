@@ -10,6 +10,7 @@ body {
     color: #333;
 }
 
+/* Styling the Navigation Bar */
 .navdiv {
     display: flex;
     align-items: baseline;
@@ -165,7 +166,9 @@ body {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
 }
+/* Styling Navigation finish here */
 
+/* Styling the home page */
 /* Timeless beauty of Bagan */
 .homepage-about {
     display: flex;
@@ -314,7 +317,9 @@ body {
 .homepage-card:hover {
     transform: scale(1.15) !important;
 }
+/* Styling Home page ends here */
 
+/* Styling Footer */
 footer {
     width: 100%;
     position: absolute;
@@ -442,8 +447,10 @@ hr {
         left: 100%;
     }
 }
+/* Styling Footer end here */
 
 
+/* Styling History Page */
 /* Timeline Section */
 .timeline-section {
     padding: 80px 10%;
@@ -562,9 +569,10 @@ hr {
 .text-blocks-section p {
     margin-bottom: 20px;
 }
+/* Styling History Page ends here */
 
 
-/* about this page */
+/* Styling About page */
 .about-this-page-header{
     color: #fff;
     position: absolute;
@@ -611,8 +619,10 @@ hr {
     margin-right: 15px;
     cursor: pointer;
 }
+/* Styling about page end here */
 
-/* Temple Page Styles */
+
+/* Styling Temple Page */
 .temple-section {
     padding: 80px 60px;
     background-color: white;
@@ -657,8 +667,6 @@ hr {
     cursor: pointer;
 }
 
-
-
 /* Lightbox for temple page */
 #lightbox {
     position: fixed;
@@ -680,3 +688,6 @@ hr {
     max-width: 90%;
     max-height: 80%;
 }
+
+/* Styling Temple Page ends here */
+
