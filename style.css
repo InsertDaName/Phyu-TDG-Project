@@ -688,6 +688,12 @@ hr {
     max-width: 90%;
     max-height: 80%;
 }
-
 /* Styling Temple Page ends here */
 
+/* Styling the Culture Page */
+.festival section {
+    padding: 80px 10%;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
