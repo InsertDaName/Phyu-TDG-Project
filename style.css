@@ -649,6 +649,9 @@ hr {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
+    border-bottom: 2px solid #c3492c;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .temple-gallery {
@@ -691,12 +694,7 @@ hr {
 /* Styling Temple Page ends here */
 
 /* Styling the Culture Page */
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+
 /* Styling the festival section */
 .festival-section {
     padding: 80px 60px;
@@ -710,6 +708,15 @@ hr {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.cultural-subtitle {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c3492c;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .festival-gallery {
@@ -747,4 +754,35 @@ hr {
     color: #555;
     margin-top: 5px;
     text-align: left;
+}
+
+/* styling extra cultural section */
+.culture-gallery-section {
+    padding: 80px 60px;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+.cultural-gallery-section {
+    padding: 80px 60px;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+.cultural-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cultural-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.cultural-card img {
+    width: 100%;
+    border-radius: 4px;
 }
