@@ -321,9 +321,10 @@ body {
 
 /* Styling Footer */
 footer {
+    display: flex;
     width: 100%;
-    position: absolute;
-    /* position: relative; */
+    /* position: absolute; */
+    position: relative;
     /* background: linear-gradient(to bottom, #B4B396, #423C36); */
     background: url('imagesfile/footerdesign.png') no-repeat bottom center;
     background-size: cover;
@@ -335,8 +336,9 @@ footer {
 }
 
 .footer-overlay {
+
     background-color: rgba(0, 0, 0, 0.685);
-    padding-top: 100px;
+    padding-top: 15%;
     mask-image: linear-gradient(black,transparent);
     -webkit-mask-image: linear-gradient(0deg, black 68%,transparent 100%);
 }
@@ -427,6 +429,11 @@ hr {
 
 .copyright {
     text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    
 }
 
 .underline {
@@ -740,8 +747,8 @@ hr {
 
 .festival-card {
     flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+    min-width: 25%;
+    max-width: 30%;
 }
 
 .festival-card img {
@@ -758,6 +765,7 @@ hr {
 }
 
 .cultural-dance-video {
+    
     margin-bottom: 20px;
 }
 
@@ -790,8 +798,8 @@ hr {
 
 .cultural-card {
     flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+    min-width: 25%;
+    max-width: 30%;
 }
 
 .cultural-card img {
