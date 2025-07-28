@@ -843,45 +843,36 @@ p {
 @media screen and (max-width: 600px) {
   .navdiv {
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
+    padding: 20px;
   }
 
-  .navlinks ul {
+  .festival-gallery,
+  .cultural-gallery {
     flex-direction: column;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
   }
 
-  .navlinks ul li {
-    width: 100%;
-  }
-
-  .navlinks ul li a {
-    display: block;
-    padding: 8px;
-  }
-
-  .openbtn {
-    margin-top: 10px;
+  .festival-card,
+  .cultural-card {
+    max-width: 100%;
   }
 
   .titlecontent h1 {
-    font-size: 32px;
+    font-size: 40px;
+  }
+
+  footer .row {
+    flex-direction: column;
     text-align: center;
-    padding: 0 10px;
   }
 }
+
 
 /* For tablets */
 @media screen and (max-width: 992px) and (min-width: 601px) {
   .festival-gallery,
   .cultural-gallery {
     flex-wrap: wrap;
+    
   }
 
   .festival-card,
