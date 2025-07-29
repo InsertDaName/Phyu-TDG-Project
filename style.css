@@ -1,16 +1,69 @@
+:root {
+    --base-color: white;
+    --base-palette: #e5dedd;
+    --text-color:#333;
+    --secondary-text: #555;
+    --accent-color: #c3492c;
+    --secondary-accent-color: #a53e24;
+    --colour-big-heading: white;
+}
+
+.darkmode {
+    --base-color: #241515;
+    --base-palette: #4a4a4a;
+    --text-color:#ffffff;
+    --secondary-text: #9f9c9c;
+    --accent-color: #d67157;
+    --secondary-accent-color: #aa3619;
+        --colour-big-heading: white;
+}
+
+/* Toggle button styles */
+#theme-toggle {
+    background-color: #C3492C;
+    border: none;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+#theme-toggle i:last-child {
+    display: none;
+}
+
+.darkmode #theme-toggle i:first-child{
+    display: none;
+}
+
+.darkmode #theme-toggle i:last-child{
+    display: block;
+}
+#theme-toggle:hover {
+    background-color: #a53e24;
+}
+
+/* Icon style */
+#theme-icon {
+    font-size: 18px;
+}
+
 * {
         margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
   overflow-x: hidden;
   width: 100%;
 }
 body {
     font-family: 'Lato', sans-serif;
-    background: white;
-    color: #333;
+    background: var(--base-color);
+    color: var(--text-color);
       overflow-x: hidden;
   width: 100%;
 }
@@ -21,7 +74,7 @@ body {
     align-items: baseline;
     justify-content: space-between;
     padding: 30px 80px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
@@ -50,7 +103,7 @@ body {
     content: '';
     width: 0%;
     height: 2px;
-    background: #C3492C;
+    background: #c3492c;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -81,7 +134,7 @@ body {
 }
 
 /* creating the search overlay*/
-.openbtn{
+/* .openbtn{
 
     background-color: #C3492C;
     border: none;
@@ -90,13 +143,13 @@ body {
     right: 40px;
     color: white;
     cursor: pointer;
-}
+} */
 
-.openbtn:hover {
+/* .openbtn:hover {
     background-color: #a53e24;
     color: white;
-}
-.search {
+} */
+/* .search {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -106,32 +159,32 @@ body {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.685);
 
-}
+} */
 
-.search-content {
+/* .search-content {
     position: relative;
     top: 40%;
     width: 70%;
     margin: auto;
     margin-top: 30px;
     text-align: center;
-}
+} */
 
 /* creating the close button */
-.search .closebtn {
+/* .search .closebtn {
     position: absolute;
     top: 25px;
     right: 50px;
     color: white;
     font-size: 60px;
     cursor: pointer;
-}
-.search .closebtn:hover {
+} */
+/* .search .closebtn:hover {
     color: #a53e24;
-}
+} */
 
 /* styling the search field */
-.search input[type=text] {
+/* .search input[type=text] {
     float: left;
     width: 80%;
     border: none;
@@ -142,10 +195,10 @@ body {
 
 .search input[type=text]:hover {
     background-color: #f2f2f2;
-}
+} */
 
 /* styling seach button */
-.search button {
+/* .search button {
     float: left;
     width: 20%;
     font-size: 17px;
@@ -154,10 +207,10 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-}
+} */
 
 .titlecontent{
-    color: #fff;
+    color: var(--base-color);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -167,6 +220,7 @@ body {
 }
 
 .titlecontent h1 {
+    color: var(    --colour-big-heading);
     font-size: 70px;
     font-family: 'Playfair Display', serif;
     font-weight: 800;
@@ -188,7 +242,7 @@ body {
     /* justify-content: space-between; */
     align-items: center;
     padding: 60px 10%;
-    background-color: white;
+    background-color:var(--base-color);
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -260,18 +314,148 @@ body {
 .enter-button:hover {
     background-color: #a53e24;
 }
-/* Topiv section */
-.topics-section {
+/* Restyling topic section as carousle slide */
+
+.topic-section-title {
     padding: 60px 80px;
     text-align: center;
 }
-
-.topics-section h2 {
+.topic-section-title h1 {
     font-size: 36px;
     font-family: 'Playfair Display', serif;
     margin-bottom: 40px;
 }
 
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #a53e24;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #c3492c;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    background: whitesmoke;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .badge.history {
+    color: #C3492C;
+    background: #e5dedd;
+}
+
+.card-list .card-link .badge.culture {
+    color: #C3492C;
+    background: #e5dedd;
+}
+
+.card-list .card-link .badge.temple {
+    color: #C3492C;
+    background: #e5dedd;
+}
+
+.card-list .card-link .badge.travel {
+    color: #C3492C;
+    background: #e5dedd;
+}
+
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #a53e24;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #c3492c;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link .card-button {
+    color: white;
+    background: #C3492C;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #c26e59;
+}
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #4a1f15;
+    margin-top: -35px;
+}
+
+/* To hide the swiper slide button on small screen */
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
+
+/* Topiv section
+.topics-section {
+    padding: 60px 80px;
+    text-align: center;
+}
+.topics-section h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+}
 .homepage-section-topics {
     display: flex;
     flex-direction: column;
@@ -279,18 +463,15 @@ body {
     gap: 30px;
     padding: 60px 80px;
 }
-
-/* Row of cards */
+Row of cards
 .row-of-cards{
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
-
-/* Each individual card */
+Each individual card
 .homepage-card {
-
     width: 32.5%;
     background-color: #fff;
     border-radius: 12px;
@@ -299,32 +480,21 @@ body {
     margin: 20px;
     max-height:20%;
     transition: transform 0.3s ease;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
 
 }
-
-
-
 .homepage-card img {
     width: 100%;
     height: auto;
-
 }
-
 .card-content {
     padding: 16px;
     text-align: center;
 }
-
-
 .card-content {
     font-size: 30px;
     margin-bottom: 8px;
-    /* text-align: center; */
-}
 
+}
 .homepagebutton {
     display: inline-block;
     padding: 8px 16px;
@@ -337,13 +507,12 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 }
-
 .homepagebutton:hover {
     background-color: #a53e24;
 }
 .homepage-card:hover {
     transform: scale(1.15) !important;
-}
+} */
 /* Styling Home page ends here */
 
 /* Styling Footer */

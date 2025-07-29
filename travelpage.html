@@ -49,18 +49,11 @@
 
         </div>
 
-<!-- search bar -->
-
-  <button class="openbtn" onclick="openSearch()"><i class="fa fa-search"></i></button>
-  <div class="search" id="SearchOverlay">
-    <div class="search-content">
-      <form>
-        <input type="text" name="search" placeholder="Search...">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-    <span class="closebtn" onclick="closeSearch()" class="" title="close">X</span>
-  </div>
+<!-- Dark/Light Mode Toggle -->
+<button id="theme-toggle">
+  <i class="fa fa-moon" id="theme-icon"></i>
+  <i class="fa fa-sun" id="theme-icon"></i>
+</button>
 
         </div>
 
@@ -131,11 +124,9 @@
 <div class="row">
     <div class="col">
         <div class="logo" ><a href="homepage.html"><h1>VOYAGE</h1></a></div>
-        <p >Lorem ipsum dolor sit amet. 
-            Vel veniam earum sed incidunt rerum quo temporibus animi a culpa quisquam ut mollitia placeat. 
-            Qui laboriosam adipisci est assumenda laboriosam vel asperiores corporis. 
-            Sed quasi architecto non ipsa dolores eum dignissimos beatae qui galisum consequatur. 
-            Ea culpa alias et facere distinctio est quod similique ea voluptate Quis et reprehenderit consequuntur!</p>
+        <p>Voyage is dedicated to sharing the beauty, history, and culture of Bagan, Myanmar. 
+          Explore ancient temples, local traditions, 
+          and travel tips to make the most of your visit</p>
     </div>
     <div class="col">
         <h2 data-aos="zoom-in" data-aos-duration="5000">Resources <div class="underline"><span></span></div></h2>
@@ -172,7 +163,7 @@
 </div>
 
 <hr>
-<p class="copyright"data-aos="zoom-in" data-aos-duration="5000">Voyage © 2025 - All Rights Reserved</p>
+<p class="copyright">Voyage © 2025 - All Rights Reserved</p>
 </div>
     </footer>
     
@@ -215,5 +206,30 @@
       lightbox.classList.remove('active')
   })
 </script>
+
+ <!-- Link custom script -->
+  <script src="script.js"></script>
+
+    <script>
+    let darkmode = localStorage.getItem('darkmode')
+  const toggleButton = document.getElementById('theme-toggle');
+
+  const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+  }
+
+    const disableDarkmode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+  }
+
+  if(darkmode === "active") enableDarkmode()
+
+  toggleButton.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+  })
+  </script>
     </body>
 </html>
