@@ -175,18 +175,29 @@ body {
 
 /* Styling the home page */
 /* Timeless beauty of Bagan */
-.homepage-about {
+/* .homepage-about {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 80px 100px;
     background-color: white;
     gap: 60px;
+} */
+.homepage-about {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 60px 10%;
+    background-color: white;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .homepage-about-left {
     flex: 1;
     max-width: 500px;
+    text-align: left;
+    margin-bottom: 40px;
 }
 
 .homepage-about-left h2 {
@@ -194,8 +205,9 @@ body {
     font-size: 40px;
     letter-spacing: 1px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
 
 .subheading {
     color: #666;
@@ -206,22 +218,32 @@ body {
     display: inline-block;
 }
 
-.homepage-about-left img {
+.homepage-about-image img {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    flex: 1;
+}
+
+.homepage-about-image{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .homepage-about-right {
-    flex: 2;
-    max-width: 700px;
+    flex: 1;
+    /* max-width: 300px; */
 }
 
 .homepage-about-right p {
 
     font-size: 17px;
     line-height: 1.7;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .enter-button {
@@ -582,7 +604,6 @@ hr {
 
 /* Text Blocks Section */
 .text-blocks-section {
-    background-color: #f8f8f8;
     padding: 60px 10%;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -647,21 +668,24 @@ hr {
 
 
 /* Styling Temple Page */
-.temple-section {
+.temple-section,
+.travel-section {
     padding: 80px 60px;
     background-color: white;
     font-family: 'Lato', sans-serif;
     color: #333;
 }
 
-.temple-section h1 {
+.temple-section h1,
+.travel-section h1 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.temple-section h2 {
+.temple-section h2,
+.travel-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: bold;
@@ -669,7 +693,8 @@ hr {
     margin-bottom: 10px;
 }
 
-.temple-section .subheading {
+.temple-section .subheading,
+.travel-section .subheading {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
@@ -678,7 +703,8 @@ hr {
     display: inline-block;
 }
 
-.temple-gallery {
+.temple-gallery,
+.travel-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -686,7 +712,8 @@ hr {
     margin-bottom: 40px;
 }
 
-.temple-gallery img {
+.temple-gallery img,
+.travel-gallery img {
     width: 32%;
     height: auto;
     border-radius: 5px;
