@@ -325,14 +325,37 @@ html, body {
     align-items: center;
 }
 .topic-section-title {
-    padding: 60px 80px;
+    /* padding: 60px 80px;
     text-align: center;
+    justify-content: center;
+    display: flex; */
+    display: flex; /* Enables flexbox for alignment */
+    align-items: center; /* Vertically centers items */
+    text-align: center; /* Centers the title text */
+    margin: 20px 0; /* Adds some spacing around the container */
 }
 .topic-section-title h1 {
     font-size: 36px;
     font-family: 'Playfair Display', serif;
     margin-bottom: 40px;
+    margin: 0; /* Removes default margin from the heading */
+    padding: 0 10px; /* Adds padding around the title text */
+    white-space: nowrap; /* Prevents the title from wrapping */
 }
+
+
+.line {
+    flex-grow: 1; /* Allows the line to expand and fill available space */
+    height: 2px; /* Sets the thickness of the line */
+    background-color: #272626; /* Sets the color of the line */
+    margin: 0 50px; /* Adds spacing between the line and the title */
+  }
+
+.title-container h2 {
+    margin: 0; /* Removes default margin from the heading */
+    padding: 0 10px; /* Adds padding around the title text */
+    white-space: nowrap; /* Prevents the title from wrapping */
+  }
 
 .card-wrapper {
     max-width: 90%;
