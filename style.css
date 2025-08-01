@@ -20,7 +20,7 @@
 
 /* Toggle button styles */
 #theme-toggle {
-    background-color: #C3492C;
+    background-color: transparent;
     border: none;
     padding: 14px 20px;
     display: flex;
@@ -28,6 +28,7 @@
     align-items: center;
     color: white;
     cursor: pointer;
+    position: sticky;
 }
 
 #theme-toggle i:last-child {
@@ -47,7 +48,7 @@
 
 /* Icon style */
 #theme-icon {
-    font-size: 18px;
+    font-size: 30px;
 }
 
 * {
@@ -73,18 +74,35 @@ html, body {
 }
 
 /* Styling the Navigation Bar */
-.navdiv {
+/* .navdiv { */
     
+    /* display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 30px 80px; */
+    /* position: fixed; */
+    /* position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(54, 52, 52, 0.181);
+    
+    
+} */
+
+.navdiv {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding: 30px 80px;
-    /* position: fixed; */
-    position: sticky;
-    width: 100%;
+    padding: 12px 50px;
+    position: fixed;
     top: 0;
-    z-index: 10;
-    
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: color 0.8s ease-in-out;
 }
 
 .navlinks ul {
@@ -139,81 +157,16 @@ html, body {
     transition: 0.2s;
 }
 
-/* creating the search overlay*/
-/* .openbtn{
-
-    background-color: #C3492C;
-    border: none;
-    padding: 14px 20px;
-    top: 40px;
-    right: 40px;
-    color: white;
-    cursor: pointer;
-} */
-
-/* .openbtn:hover {
-    background-color: #a53e24;
-    color: white;
-} */
-/* .search {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.685);
-
-} */
-
-/* .search-content {
-    position: relative;
-    top: 40%;
-    width: 70%;
-    margin: auto;
-    margin-top: 30px;
-    text-align: center;
-} */
-
-/* creating the close button */
-/* .search .closebtn {
-    position: absolute;
-    top: 25px;
-    right: 50px;
-    color: white;
-    font-size: 60px;
-    cursor: pointer;
-} */
-/* .search .closebtn:hover {
-    color: #a53e24;
-} */
-
-/* styling the search field */
-/* .search input[type=text] {
-    float: left;
-    width: 80%;
-    border: none;
-    padding: 17px;
-    font-size: 17px;
-    background-color: white;
+.navdiv.scrolled {
+    background-color: #743322;
+    opacity: 0.98;
 }
 
-.search input[type=text]:hover {
-    background-color: #f2f2f2;
+/* .navdiv.active-bg {
+    background: rgba(0, 0, 0, 0.685);
 } */
 
-/* styling seach button */
-/* .search button {
-    float: left;
-    width: 20%;
-    font-size: 17px;
-    padding: 17px;
-    background-color: #c3492c;
-    border: none;
-    color: white;
-    cursor: pointer;
-} */
+
 
 .titlecontent{
     color: var(--base-color);
@@ -233,19 +186,8 @@ html, body {
 }
 /* Styling Navigation finish here */
 
-/* Styling the home page */
-/* Timeless beauty of Bagan */
-/* .homepage-about {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 100px;
-    background-color: white;
-    gap: 60px;
-} */
 .homepage-about {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 60px 10%;
     background-color:var(--base-color);
@@ -266,6 +208,7 @@ html, body {
     letter-spacing: 1px;
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: nowrap;
 }
 
 
@@ -484,7 +427,7 @@ footer {
     width: 100%;
     /* position: absolute; */
     position: relative;
-    /* background: linear-gradient(to bottom, #B4B396, #423C36); */
+
     background: url('imagesfile/footerdesign.png') no-repeat bottom center;
     background-size: cover;
     color: #f0f0f0;
@@ -554,29 +497,128 @@ footer {
     color: #f0f0f0;
 }
 
-.social-icons .fa-brands {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #f0f0f0;
-    margin-right: 15px;
-    cursor: pointer;
+#SocialIcons {
+  display: flex;
+
+  justify-content: center;
+  gap: 30px;
+margin-top: 40px;
 }
-.social-icons .fa-solid {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #f0f0f0;
-    margin-right: 15px;
-    cursor: pointer;
+
+/* Each icon container */
+.icons {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.icons:hover {
+  border-color: transparent;
+}
+
+/* Tooltip */
+.iconName {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.icons:hover .iconName {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Tooltip colors */
+.icons.instaIcon:hover .iconName {
+  background: linear-gradient(30deg, #0000ff, #f56040);
+}
+
+.icons.xIcon:hover .iconName {
+  background: #000;
+}
+
+.icons.emailIcon:hover .iconName {
+  background: #ff5e00;
+}
+
+/* Inner icon styling */
+.icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  z-index: 2;
+  color: #ffffff;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+.icon:hover i {
+  color: #fff;
+}
+
+/* Animated background fill */
+.icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+.icon:hover::before {
+  height: 100%;
+}
+
+/* Background fill colors */
+.icon.insta::before {
+  background: linear-gradient(40deg, #0000ff, #f56040);
+}
+
+.icon.x::before {
+  background: #000;
+}
+
+.icon.email::before {
+  background: #ff5e00;
+}
+
+#SocialIcons a {
+   text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+   position: absolute;
+  color: inherit;
+  z-index: 10;  
 }
 
 hr {
@@ -775,7 +817,7 @@ hr {
     margin-bottom: 40px;
 }
 
-.about-this-page-social-icons .fa-brands {
+/* .about-this-page-social-icons .fa-brands {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -798,9 +840,127 @@ hr {
     background: #f0f0f0;
     margin-right: 15px;
     cursor: pointer;
-}
+} */
 /* Styling about page end here */
 
+#SocialIconsAbout {
+ display: flex;
+  justify-content: center;  
+  gap: 30px;                  
+  margin-top: 30px;           
+  position: relative;
+}
+
+#SocialIconsAbout .icons {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+#SocialIconsAbout .icons:hover {
+  border-color: transparent;
+}
+
+#SocialIconsAbout .iconName {
+  position: absolute;
+    top: -35px;
+    left: 50%;
+  transform: translateX(-50%) scale(0);
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+
+}
+
+#SocialIconsAbout .icons:hover .iconName {
+  transform: translateX(-50%) scale(1);
+}
+
+#SocialIconsAbout .icons.instaIcon:hover .iconName {
+  background: linear-gradient(30deg, #0000ff, #f56040);
+}
+
+#SocialIconsAbout .icons.xIcon:hover .iconName {
+  background: #000;
+}
+
+#SocialIconsAbout .icons.emailIcon:hover .iconName {
+  background: #ff5e00;
+}
+
+#SocialIconsAbout .icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SocialIconsAbout .icon i {
+  z-index: 2;
+  color: #ffffff;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+#SocialIconsAbout .icon:hover i {
+  color: #fff;
+}
+
+#SocialIconsAbout .icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+#SocialIconsAbout .icon:hover::before {
+  height: 100%;
+}
+
+#SocialIconsAbout .icon.insta::before {
+  background: linear-gradient(40deg, #0000ff, #f56040);
+}
+
+#SocialIconsAbout .icon.x::before {
+  background: #000;
+}
+
+#SocialIconsAbout .icon.email::before {
+  background: #ff5e00;
+}
+
+#SocialIconsAbout a {
+   text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+   position: absolute;
+  color: inherit;
+  z-index: 2;  
+}
 
 /* Styling Temple Page */
 .temple-section,

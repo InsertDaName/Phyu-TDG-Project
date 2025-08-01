@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
 
+
         <!-- Link SwiperJs CSS -->
 <link
   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -28,7 +29,7 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            overflow: hidden;
+            padding-top: 100px;
 
             mask-image: linear-gradient(black,transparent);
             -webkit-mask-image: linear-gradient(black 68%,transparent 100%);
@@ -40,9 +41,8 @@
 
     <body>
 
-<!-- Header and Navigation bar -->
-        <div class="header">
-            <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
+<!-- Navigation bar -->
+             <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
                 <div class="logo"><a href="index.html"><h1>VOYAGE</h1></a></div>
                 <div class="navlinks">
                 <ul>
@@ -63,8 +63,9 @@
 </button>
 
             </div>
-
-
+        
+<!-- Header -->
+        <div class="header">
             <div class="titlecontent">
             <h1 data-aos="fade-up" data-aos-duration="3000">DISCOVER BAGAN</h1>
         </div>
@@ -151,8 +152,7 @@
           <a href="historypage.html" class="card-link">
             <img src="imagesfile/BaganErapaintingofThingyan.jpg" alt="Card Image" class="card-image">
             <p class="badge history">History</p>
-            <h2 class="card-title">Lorem ipsum dolor sit explicabo
-              adipisicing elit</h2>
+            <h2 class="card-title">Insight to History of Bagan</h2>
               <button class="card-button material-symbols-outlined">arrow_forward</button>
           </a>
         </li>
@@ -161,8 +161,7 @@
           <a href="culturepage.html" class="card-link">
             <img src="imagesfile/puppets.jpg" alt="Card Image" class="card-image">
             <p class="badge culture">Culture</p>
-            <h2 class="card-title">Lorem ipsum dolor sit explicabo
-              adipisicing elit</h2>
+            <h2 class="card-title">Burmese Culture</h2>
               <button class="card-button material-symbols-outlined">arrow_forward</button>
           </a>
         </li>
@@ -171,8 +170,7 @@
           <a href="templepage.html" class="card-link">
             <img src="imagesfile/templeimg1.jpg" alt="Card Image" class="card-image">
             <p class="badge temple">Temple</p>
-            <h2 class="card-title">Lorem ipsum dolor sit explicabo
-              adipisicing elit</h2>
+            <h2 class="card-title">Architecture</h2>
               <button class="card-button material-symbols-outlined">arrow_forward</button>
           </a>
         </li>
@@ -181,8 +179,7 @@
           <a href="travelpage.html" class="card-link">
             <img src="imagesfile/transport.jpg" alt="Card Image" class="card-image">
             <p class="badge travel">Travel</p>
-            <h2 class="card-title">Lorem ipsum dolor sit explicabo
-              adipisicing elit</h2>
+            <h2 class="card-title">Travelling around Bagan</h2>
               <button class="card-button material-symbols-outlined">arrow_forward</button>
           </a>
         </li>
@@ -238,11 +235,42 @@
         </uL>
     </div>
 </div>
-    <div class="social-icons">
+    <!-- <div class="social-icons" id="social-icons">
         <i class="fa-brands fa-x-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-solid fa-envelope"></i>
+    </div> -->
+
+    <div id="SocialIcons">
+
+  <div class="icons instaIcon">
+    <p class="iconName">Instagram</p>
+    <div class="icon insta">
+      <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+      <i class="fa-brands fa-instagram"></i>
     </div>
+  </div>
+
+      <div class="icons xIcon">
+        <p class="iconName">X</p>
+        <div class="icon x">
+          <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+        <div class="icons emailIcon">
+        <p class="iconName">Email</p>
+        <div class="icon email">
+          <a href="mailto:pch22008@my.hghs.school.nz"></a>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+
+
+
+
+</div>
 
 </div>
 
@@ -257,15 +285,7 @@
     AOS.init();
   </script>
 
-  <script>
-    function openSearch(){
-      document.getElementById("SearchOverlay").style.display="block";
-    }
 
-    function closeSearch(){
-      document.getElementById("SearchOverlay").style.display="none";
-    }
-  </script>
 
 <!-- Linking Swiper Js script -->
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -294,5 +314,20 @@
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
   })
   </script>
+
+
+<script>
+  document.addEventListener('scroll', () =>{
+    const nav = document.querySelector('.navdiv');
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+
+    if(window.scrollY > headerHeight) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
     </body>
 </html>
