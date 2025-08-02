@@ -75,22 +75,7 @@ html, body {
 }
 
 /* Styling the Navigation Bar */
-/* .navdiv { */
-    
-    /* display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 30px 80px; */
-    /* position: fixed; */
-    /* position: sticky;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: rgba(54, 52, 52, 0.181);
-    
-    
-} */
+
 
 .navdiv {
     display: flex;
@@ -123,36 +108,20 @@ nav ul li a {
     text-decoration: none;
     position: relative;
 
-} */
-
-/* .nav ul li a::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #c3492c;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav ul li a:hover::after{
-    width: 100%;
-} */
-
-
+} 
 nav ul li a::after,
-.sidebar ul li a::after {
+.sidebar li a::after {
     content: '';
     width: 0%;
     height: 2px;
-    background: #c3492c;
+    background: #C3492C;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: width 0.5s ease;
 }
 
 nav ul li a:hover::after,
-.sidebar ul li a::after {
+.sidebar li a:hover::after {
     width: 100%;
 }
 
