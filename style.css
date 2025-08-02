@@ -1424,7 +1424,8 @@ hr {
 }
 
 .festival-card .image-credit,
-.cultural-card .image-credit {
+.cultural-card .image-credit,
+.map-container .image-credit {
     line-height: 1.2;
     margin-top: 5px;
     margin-bottom: 5px;
