@@ -107,7 +107,7 @@ html, body {
     overflow: hidden;
 }
 
-.navlinks ul {
+nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
@@ -117,15 +117,15 @@ html, body {
 
 }
 
-.navlinks ul li a {
+nav ul li a {
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     position: relative;
-    /* line-height: 1.2; */
-}
 
-.navlinks ul li a::after{
+} */
+
+/* .nav ul li a::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -135,7 +135,24 @@ html, body {
     transition: 0.5s;
 }
 
-.navlinks ul li a:hover::after{
+.nav ul li a:hover::after{
+    width: 100%;
+} */
+
+
+nav ul li a::after,
+.sidebar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #c3492c;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after,
+.sidebar ul li a::after {
     width: 100%;
 }
 
@@ -164,12 +181,6 @@ html, body {
     opacity: 0.98;
 }
 
-/* .navdiv.active-bg {
-    background: rgba(0, 0, 0, 0.685);
-} */
-
-
-
 .titlecontent{
     color: var(--base-color);
     position: absolute;
@@ -187,6 +198,60 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 2000;
+    background-color: rgba(171, 164, 164, 0.206);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 80px 10%;
+}
+
+.sidebar li {
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 400px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+    }
+
+    
+    
+}
+
+/* @media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+} */
+
+
 
 
 /* Styling Navigation finish here */
@@ -931,6 +996,8 @@ hr {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
+     gap: 15px; 
+    align-items: flex-start; 
 }
 
 .map-container {
@@ -941,7 +1008,7 @@ hr {
 .map-container img {
     width: 75%;
     height: 70%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -955,6 +1022,10 @@ hr {
 
 .geography-description p {
     margin-bottom: 45px;
+}
+
+.geography-description p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -1193,9 +1264,18 @@ hr {
     border-radius: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
+    object-fit: cover;
 }
 
-/* Lightbox for temple page */
+.temple-section p,
+.travel-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Lightbox for temple and travel page */
 #lightbox {
     position: fixed;
     z-index: 1000;
@@ -1204,6 +1284,43 @@ hr {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
+}
+
+/* For phones */
+@media screen and (max-width: 600px) {
+  .temple-section,
+  .travel-section {
+    padding: 40px 20px;
+  }
+
+  .temple-section h1,
+  .travel-section h1 {
+    font-size: 28px;
+  }
+
+  .temple-section h2,
+  .temple-section h2 {
+    font-size: 24px;
+  }
+
+    .temple-section p,
+    .travel-section p {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .temple-gallery img,
+  .travel-gallery img {
+    width: 100%;
+  }
+}
+
+/* For tablets */
+@media screen and (max-width: 992px) and (min-width: 601px) {
+  .temple-gallery img,
+  .travel-gallery img {
+    width: 48%;
+  }
 }
 
 #lightbox.active {
@@ -1259,6 +1376,9 @@ hr {
 
 .festival-card img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
     border-radius: 4px;
 }
 
@@ -1310,11 +1430,15 @@ hr {
 
 .cultural-card img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
     border-radius: 4px;
 }
 
 .festival-card p,
 .cultural-dance-section p,
+.cultural-p-e p,
 .culture-gallery-section > p {
     line-height: 1.6;
     margin-bottom: 15px;
@@ -1331,12 +1455,38 @@ hr {
     margin-bottom: 20px;
 }
 .festival-card h3,
+.cultural-p-e h3,
 .cultural-card h3 {
     margin-bottom: 10px;
     font-size: 25px;
 } 
 p {
     text-align: justify;
+}
+
+/* .cultural-p-e {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+} */
+
+.etiquette-item {
+  margin-bottom: 30px;
+}
+
+.etiquette-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.etiquette-item p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--secondary-text);
 }
 
 /* Responsive */

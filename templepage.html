@@ -37,9 +37,10 @@
     <body>
 
 <!-- Navigation bar -->
-             <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
+             <!-- <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
                 <div class="logo"><a href="index.html"><h1>VOYAGE</h1></a></div>
-                <div class="navlinks">
+                
+                 <div class="navlinks">
                 <ul>
                     <li><a href="aboutpage.html">About</a></li>
                     <li><a href="historypage.html">History</a></li>
@@ -48,7 +49,30 @@
                     <li><a href="travelpage.html">Travel</a></li>
                 </ul>
 
-            </div>
+            </div> -->
+
+              <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
+                <div class="logo"><a href="index.html"><h1>VOYAGE</h1></a></div>
+                
+                 <nav>
+                <ul class="sidebar">
+                  <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="aboutpage.html">About</a></li>
+                    <li><a href="historypage.html">History</a></li>
+                    <li><a href="culturepage.html">Culture</a></li>
+                    <li><a href="templepage.html">Temple</a></li>
+                    <li><a href="travelpage.html">Travel</a></li>
+                </ul>
+                <ul>
+                    <li class="hideOnMobile"><a href="aboutpage.html">About</a></li>
+                    <li class="hideOnMobile"><a href="historypage.html">History</a></li>
+                    <li class="hideOnMobile"><a href="culturepage.html">Culture</a></li>
+                    <li class="hideOnMobile"><a href="templepage.html">Temple</a></li>
+                    <li class="hideOnMobile"><a href="travelpage.html">Travel</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+
+              </nav>
 
 
 <!-- Dark/Light Mode Toggle -->
@@ -85,24 +109,32 @@
         Golden temples are built using a combination of materials, with the use of gold leaf, diamonds, and rubies to cover brick and copper structures.
         
         There are 2 main architectural styles used in building temples in Bagan. They both took their influence from early Pya people’s constructions in India and Sri Lanka (Ceylon), and they represent Mount Meru in the Buddhist cosmos.
-        Stupa-style (Solid temples) are bell-shaped with one or more rectangular terraces at the base. They contain a relic chamber. 
+        <br>
+        <br>
+        The temples were designed to represent Mount Meru, which is a sacred mountain in Buddhist cosmology. Both of the temples’ designs reflect Myanmar Theravada Buddhist traditions. 
+        Both of the temples’ designs serve as a place to worship and meditate.
+
         </p>
 
     <hr class="wavy-line">
 
     <!-- Section 2 -->
     <h2>HEADING</h2>
-    <p class="subheading">Lorem ipsum dolor sit amet. Vel veniam earum</p>
+    <p class="subheading">Gu-style (hollow temples)</p>
 
     <div class="temple-gallery">
-        <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 1">
+        <img src="imagesfile/Ananda_temple_interior.jpg" alt="Thatbyinnyu Temple View 1">
         <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 2">
         <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 3">
     </div>
 
     <p>Gu-style (hollow temples) have a vaulted indoor chamber and point arches. his technique of vaulting is thought to have been developed in Bagan in the 11th century.
         The vaulting technique is the use of brick vaulting and point arches, which were developed in Bagan in the 11th century. It was an innovative structure at that period of time however, it was lost in the later eras. 
-        </p>
+        <br>
+        <br>
+        Gu-style (Hollow Temples) are walk-in temples to worship, meditate and display Buddha statues, murals and images.
+         They have halls and chambers to explore and pray. Most of them have four doorways to enter and exit.
+      </p>
 
     <hr class="wavy-line">
 
@@ -116,7 +148,12 @@
         <img src="imagesfile/Temple_n_trees.jpg" alt="Thatbyinnyu Temple View 3">
     </div>
 
-    <p>Lorem ipsum dolor sit amet. Vel veniam earum sed incidunt rerum quo temporibus animi a culpa quisquam ut mollitia placeat.</p>
+    <p>Stupa-style (Solid temples) are bell-shaped with one or more rectangular terraces at the base. They contain a relic chamber. 
+    Stupa-style(solid temples) are non-enterable structures which contain relics and sacred objects.
+     They are massive and have a solid structure.
+      They are built as religious offerings to gain good spiritual well-being and serve as sacred structures
+       that hold Buddha relics or other holy objects.
+      </p>
 
 </section>
 
@@ -273,4 +310,14 @@
     }
   });
 </script>
+
+<script>
+  function showSidebar() {
+    document.querySelector('.sidebar').style.display = 'flex';
+  }
+  function hideSidebar() {
+    document.querySelector('.sidebar').style.display = 'none';
+  }
+</script>
+</body>
 </html>
