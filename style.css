@@ -71,7 +71,7 @@ body {
 
 html, body {
     overflow: visible;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* Styling the Navigation Bar */
@@ -104,6 +104,7 @@ html, body {
     z-index: 1000;
     background: transparent;
     transition: color 0.8s ease-in-out;
+    overflow: hidden;
 }
 
 .navlinks ul {
@@ -176,6 +177,7 @@ html, body {
     left: 50%;
     transform: translate(-50%,-60%);
     text-align: center;
+    overflow: hidden;
 
 }
 
@@ -196,6 +198,7 @@ html, body {
     background-color:var(--base-color);
     gap: 40px;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .homepage-about-left {
@@ -203,6 +206,7 @@ html, body {
     max-width: 500px;
     text-align: left;
     margin-bottom: 40px;
+
 }
 
 .homepage-about-left h2 {
@@ -212,6 +216,7 @@ html, body {
     font-weight: bold;
     margin-bottom: 5px;
     white-space: nowrap;
+
 }
 
 
@@ -222,14 +227,18 @@ html, body {
     border-bottom: 2px solid #c3492c;
     padding-bottom: 10px;
     display: inline-block;
+
 }
 
 .homepage-about-image img {
-    width: 100%;
+    width: 100%;    
+    max-width: 100%;  
+    height: auto;          
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     max-width: 500px;
     flex: 1;
+
 }
 
 .homepage-about-image{
@@ -237,11 +246,13 @@ html, body {
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
+
 }
 
 .homepage-about-right {
     flex: 1;
     /* max-width: 300px; */
+
 }
 
 .homepage-about-right p {
@@ -250,6 +261,7 @@ html, body {
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify;
+
 }
 
 .enter-button {
@@ -266,9 +278,34 @@ html, body {
 .enter-button:hover {
     background-color: #a53e24;
 }
+
+@media screen and (max-width: 600px) {
+  .homepage-about {
+    flex-direction: column; 
+    padding: 30px 5%;  
+  }
+
+  .homepage-about-left,
+  .homepage-about-right,
+  .homepage-about-image {
+    max-width: 100%;
+    text-align: center;     
+  }
+
+  .homepage-about-left h2 {
+    white-space: normal;     
+    font-size: 28px;      
+  }
+
+  .homepage-about-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 /* Restyling topic section as carousle slide */
 .topics-section {
     align-items: center;
+    overflow: hidden;
 }
 .topic-section-title {
     /* padding: 60px 80px;
@@ -902,10 +939,11 @@ hr {
 }
 
 .map-container img {
-    width: 100%;
+    width: 75%;
+    height: 70%;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .geography-description {
@@ -913,6 +951,10 @@ hr {
     min-width: 300px;
     font-size: 16px;
     line-height: 1.6;
+}
+
+.geography-description p {
+    margin-bottom: 45px;
 }
 
 
