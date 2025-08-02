@@ -675,7 +675,7 @@ hr {
 
 /* Styling History Page */
 /* Timeline Section */
-.timeline-section {
+/* .timeline-section {
     padding: 80px 10%;
     background-color: #fff;
     text-align: center;
@@ -732,9 +732,97 @@ hr {
 .timeline-card p {
     font-size: 14px;
     color: #555;
+} */
+
+.timeline h1{
+    margin: 0.3em;
+    font-size: 3em;
 }
 
+.checkpoint h2 {
+    margin-bottom: 0.5em;
+}
 
+.timeline p {
+    color: #555;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+
+.checkpoint {
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint div {
+    border: 2px solid #272626;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.checkpoint p {
+    line-height: 27px;
+    color: white;
+}
+
+.checkpoint:nth-child(odd) {
+    border-left: 3px solid #272626;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even) {
+    border-right: 3px solid #272626;
+    padding-left: 3em;
+    transform: translateX(-17em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 0.5em #4e89db;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before {
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before {
+    right: -0.5em;
+}
 
 /* Geography Section */
 .geography-section {
