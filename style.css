@@ -71,6 +71,7 @@ body {
 
 html, body {
     overflow: visible;
+    overflow-x: hidden;
 }
 
 /* Styling the Navigation Bar */
@@ -184,6 +185,8 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
 }
+
+
 /* Styling Navigation finish here */
 
 .homepage-about {
@@ -756,7 +759,9 @@ hr {
 .timeline p {
     color: #555;
     font-size: 1.3rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    word-spacing: 3px; 
+    letter-spacing: normal
 }
 
 .timeline {
@@ -777,6 +782,8 @@ hr {
     background: #272626;
     transform: translateX(-50%);
 }
+
+
 
 
 
@@ -843,6 +850,27 @@ hr {
 
 .checkpoint:nth-child(even) div::before {
     left: -0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .checkpoint {
+    width: 90%;
+    left: 0 !important;
+    padding-left: 3em;
+  }
+
+  .checkpoint:nth-child(odd)::before,
+  .checkpoint:nth-child(even)::before {
+    left: 1.2em;
+  }
+
+  .checkpoint div::before {
+    left: -2em;
+  }
 }
 
 /* Geography Section */
