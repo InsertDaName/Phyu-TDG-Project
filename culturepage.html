@@ -34,9 +34,8 @@
 
     <body>
 
-<!-- Header and Navigation bar -->
-        <div class="header">
-            <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
+<!-- Navigation bar -->
+             <div class="navdiv" data-aos="fade-down" data-aos-duration="3000">
                 <div class="logo"><a href="index.html"><h1>VOYAGE</h1></a></div>
                 <div class="navlinks">
                 <ul>
@@ -48,7 +47,7 @@
                 </ul>
 
             </div>
-                <!-- <div class="search"><a href="#">Search</a></div> -->
+
 
 <!-- Dark/Light Mode Toggle -->
 <button id="theme-toggle">
@@ -57,10 +56,11 @@
 </button>
 
             </div>
-
-
+        
+<!-- Header -->
+        <div class="header">
             <div class="titlecontent">
-            <h1 data-aos="fade-up" data-aos-duration="3000">CULTURE OF BAGAN</h1>
+            <h1 data-aos="fade-up" data-aos-duration="3000">DISCOVER BAGAN</h1>
         </div>
 
         </div>
@@ -201,11 +201,42 @@
         </uL>
     </div>
 </div>
-    <div class="social-icons">
+    <!-- <div class="social-icons" id="social-icons">
         <i class="fa-brands fa-x-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-solid fa-envelope"></i>
+    </div> -->
+
+    <div id="SocialIcons">
+
+  <div class="icons instaIcon">
+    <p class="iconName">Instagram</p>
+    <div class="icon insta">
+      <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+      <i class="fa-brands fa-instagram"></i>
     </div>
+  </div>
+
+      <div class="icons xIcon">
+        <p class="iconName">X</p>
+        <div class="icon x">
+          <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+        <div class="icons emailIcon">
+        <p class="iconName">Email</p>
+        <div class="icon email">
+          <a href="mailto:pch22008@my.hghs.school.nz"></a>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+
+
+
+
+</div>
 
 </div>
 
@@ -220,44 +251,15 @@
     AOS.init();
   </script>
 
-  <script>
-    function openSearch(){
-      document.getElementById("SearchOverlay").style.display="block";
-    }
 
-    function closeSearch(){
-      document.getElementById("SearchOverlay").style.display="none";
-    }
-  </script>
-<!-- Scirpt for lightbox for images -->
-<script>
-  const lightbox = document.createElement('div')
-  lightbox.id = 'lightbox'
-  document.body.appendChild(lightbox)
 
-  const images = document.querySelectorAll('img')
-  images.forEach(image => {
-      image.addEventListener('click', e=>{
-          lightbox.classList.add('active')
-          const img = document.createElement('img')
-          img.src = image.src
-          while (lightbox.firstChild){
-              lightbox.removeChild(lightbox.firstChild)
-          }
-          lightbox.appendChild(img)
-      })
-  })
-
-  lightbox.addEventListener('click', e =>{
-      if (e.target !== e.currentTarget) return
-      lightbox.classList.remove('active')
-  })
-</script>
+<!-- Linking Swiper Js script -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
  <!-- Link custom script -->
   <script src="script.js"></script>
 
-    <script>
+  <script>
     let darkmode = localStorage.getItem('darkmode')
   const toggleButton = document.getElementById('theme-toggle');
 
@@ -278,5 +280,20 @@
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
   })
   </script>
+
+
+<script>
+  document.addEventListener('scroll', () =>{
+    const nav = document.querySelector('.navdiv');
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+
+    if(window.scrollY > headerHeight) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
     </body>
 </html>

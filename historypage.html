@@ -88,6 +88,9 @@
 </section> -->
 
 <div class="timeline">
+ <h2 class="timeline-title">TIMELINE</h2>
+    <p class="timeline-intro">An insight into the incredible experience in the world</p>
+
     <div class="checkpoint">
         <div>
             <h2>fjdhfkjdhsjfhdj</h2>
@@ -147,7 +150,7 @@
 </div>
 
 <!-- GEOGRAPHY SECTION -->
-<!-- <section class="geography-section">
+<section class="geography-section">
     <h2 class="geography-title">GEOGRAPHY</h2>
     <div class="geography-content">
         <div class="map-container">
@@ -158,23 +161,20 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet lorem et ligula vestibulum, sed dictum odio aliquam.</p>
         </div>
     </div>
-</section> -->
+</section>
 
 
 <!-- PARAGRAPH TEXT BLOCKS -->
-<!-- <section class="text-blocks-section">
+<section class="text-blocks-section">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et tincidunt orci, vel fermentum nibh. Donec sit amet velit lorem.</p>
     <p>Quisque eget orci at sapien efficitur bibendum non vitae ex. Nullam fringilla, leo ut mattis posuere, metus odio placerat enim.</p>
     <p>Aliquam erat volutpat. Fusce fringilla dolor vel odio efficitur dignissim. Sed semper convallis nulla nec laoreet.</p>
     <p>Nunc congue metus in sem sagittis accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
     <p>Donec tincidunt, magna sed vestibulum iaculis, eros diam commodo nulla, et hendrerit elit felis eget arcu.</p>
-</section> -->
+</section>
 
 
 
-
-        <footer data-aos="fade-up" data-aos-duration="3000">
-            <div class="footer-overlay">
 
 <!-- footer content -->
 <footer data-aos="fade-up" data-aos-duration="3000">
@@ -213,11 +213,42 @@
         </uL>
     </div>
 </div>
-    <div class="social-icons">
+    <!-- <div class="social-icons" id="social-icons">
         <i class="fa-brands fa-x-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-solid fa-envelope"></i>
+    </div> -->
+
+    <div id="SocialIcons">
+
+  <div class="icons instaIcon">
+    <p class="iconName">Instagram</p>
+    <div class="icon insta">
+      <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+      <i class="fa-brands fa-instagram"></i>
     </div>
+  </div>
+
+      <div class="icons xIcon">
+        <p class="iconName">X</p>
+        <div class="icon x">
+          <a href="https://x.com/draww3r?t=JLg_mFaoE8FximGEldy27w&s=33" target="_blank"></a>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+        <div class="icons emailIcon">
+        <p class="iconName">Email</p>
+        <div class="icon email">
+          <a href="mailto:pch22008@my.hghs.school.nz"></a>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
+
+
+
+
+</div>
 
 </div>
 
@@ -232,10 +263,15 @@
     AOS.init();
   </script>
 
+
+
+<!-- Linking Swiper Js script -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
  <!-- Link custom script -->
   <script src="script.js"></script>
 
-    <script>
+  <script>
     let darkmode = localStorage.getItem('darkmode')
   const toggleButton = document.getElementById('theme-toggle');
 
@@ -256,5 +292,20 @@
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
   })
   </script>
+
+
+<script>
+  document.addEventListener('scroll', () =>{
+    const nav = document.querySelector('.navdiv');
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+
+    if(window.scrollY > headerHeight) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
     </body>
 </html>

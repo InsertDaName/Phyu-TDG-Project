@@ -734,9 +734,19 @@ hr {
     color: #555;
 } */
 
-.timeline h1{
-    margin: 0.3em;
-    font-size: 3em;
+
+.timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-intro {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .checkpoint h2 {
@@ -751,13 +761,28 @@ hr {
 
 .timeline {
     margin: 5em auto;
-    max-width: 34.15em;
+    max-width: 900px;
+    position: relative;
+    text-align: center;
 }
 
+/* Draw a single vertical line in the center */
+.timeline::before {
+    content: '';
+    position: absolute;
+     top: 6em;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: #272626;
+    transform: translateX(-50%);
+}
+
+
+
 .checkpoint {
-    max-width: 34em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    width: 45%;
+    padding: 2em;
     position: relative;
 }
 
@@ -765,30 +790,25 @@ hr {
     border: 2px solid #272626;
     border-radius: 1em;
     padding: 1.5em;
-}
-
-.checkpoint p {
-    line-height: 27px;
-    color: white;
+    background: #fff;
+    overflow-wrap: break-word;
+    text-align: left;
 }
 
 .checkpoint:nth-child(odd) {
-    border-left: 3px solid #272626;
-    padding-left: 3em;
-    transform: translateX(17em);
+    left: 0;
+    text-align: right;
 }
 
 .checkpoint:nth-child(even) {
-    border-right: 3px solid #272626;
-    padding-left: 3em;
-    transform: translateX(-17em);
+    left: 55%;
 }
 
 .checkpoint:nth-child(odd)::before,
 .checkpoint:nth-child(even)::before {
     content: '';
     background: #888;
-    width: 3em;
+    width: 2em;
     height: 3px;
     position: absolute;
     top: 50%;
@@ -796,13 +816,14 @@ hr {
 }
 
 .checkpoint:nth-child(odd)::before {
-    left: 0;
+    right: -2em;
 }
 
 .checkpoint:nth-child(even)::before {
-    right: 0;
+    left: -2em;
 }
 
+/* Small circle markers */
 .checkpoint:nth-child(odd) div::before,
 .checkpoint:nth-child(even) div::before {
     content: '';
@@ -817,11 +838,11 @@ hr {
 }
 
 .checkpoint:nth-child(odd) div::before {
-    left: -0.5em;
+    right: -0.5em;
 }
 
 .checkpoint:nth-child(even) div::before {
-    right: -0.5em;
+    left: -0.5em;
 }
 
 /* Geography Section */
