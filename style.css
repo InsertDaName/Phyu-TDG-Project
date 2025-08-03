@@ -1045,30 +1045,28 @@ hr {
     margin-bottom: 40px;
 }
 
-/* .about-this-page-social-icons .fa-brands {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #f0f0f0;
-    margin-right: 15px;
-    cursor: pointer;
+@media (max-width: 768px) {
+    .about-this-page-header {
+        top: 50%; /* Move it down  a bit */
+        transform: translate(-50%, -40%);
+        padding: 0 20px; /* Add padding so text doesn't touch edges */
+        text-align: center;
+    }
+
+    .about-this-page-header h1 {
+        font-size: 28px; /* Reduce title size */
+    }
+
+    .about-this-page-header p {
+        font-size: 14px; /* Reduce paragraph size */
+        line-height: 1.6;
+    }
+
+    #SocialIconsAbout {
+        margin-top: 20px; /* Add spacing between text and social icons */
+    }
 }
-.about-this-page-social-icons .fa-solid {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #f0f0f0;
-    margin-right: 15px;
-    cursor: pointer;
-} */
+
 /* Styling about page end here */
 
 #SocialIconsAbout {
@@ -1425,7 +1423,7 @@ hr {
 
 .festival-card .image-credit,
 .cultural-card .image-credit,
-.map-container .image-credit {
+.map-container .imge {
     line-height: 1.2;
     margin-top: 5px;
     margin-bottom: 5px;
