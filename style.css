@@ -6,16 +6,18 @@
     --accent-color: #c3492c;
     --secondary-accent-color: #a53e24;
     --colour-big-heading: white;
+    --nav-text-color: white;
 }
 
 .darkmode {
     --base-color: #241515;
     --base-palette: #4a4a4a;
     --text-color:#ffffff;
-    --secondary-text: #9f9c9c;
+    --secondary-text: #b8b8b8;
     --accent-color: #d67157;
     --secondary-accent-color: #aa3619;
-        --colour-big-heading: white;
+    --colour-big-heading: white;
+    --nav-text-color: white;
 }
 
 /* Toggle button styles */
@@ -104,7 +106,7 @@ nav ul {
 
 nav ul li a {
     font-size: 18px;
-    color: #fff;
+    color: var(--nav-text-color);
     text-decoration: none;
     position: relative;
 
@@ -129,7 +131,7 @@ nav ul li a:hover::after,
 .logo h1 {
     font-family: 'Playfair Display',serif;
     font-size: 32px;
-    color: #fff;
+    color: var(--colour-big-heading);
     transition: 0.5s;
     /* margin: 0;
     line-height: 1.2; */
@@ -162,7 +164,7 @@ nav ul li a:hover::after,
 }
 
 .titlecontent h1 {
-    color: var(    --colour-big-heading);
+    color: var(--colour-big-heading);
     font-size: 70px;
     font-family: 'Playfair Display', serif;
     font-weight: 800;
@@ -307,6 +309,11 @@ nav ul li a:hover::after,
 
 }
 
+.enter-button a {
+    text-decoration: none;
+    color: white;
+}
+
 .enter-button {
     background-color: #C3492C;
     color: #fff;
@@ -373,7 +380,7 @@ nav ul li a:hover::after,
 .line {
     flex-grow: 1; /* Allows the line to expand and fill available space */
     height: 2px; /* Sets the thickness of the line */
-    background-color: #272626; /* Sets the color of the line */
+    background-color: var(--text-color); /* Sets the color of the line */
     margin: 0 50px; /* Adds spacing between the line and the title */
   }
 
@@ -481,14 +488,14 @@ nav ul li a:hover::after,
     height: 13px;
     width: 13px;
     opacity: 0.5;
-    background: #c26e59;
+    background: var(--accent-color);
 }
 .card-wrapper .swiper-pagination-bullet-active {
     opacity: 1;
 }
 
 .card-wrapper .swiper-slide-button {
-    color: #4a1f15;
+    color: var(--text-color);
     margin-top: -35px;
 }
 
@@ -546,7 +553,7 @@ footer {
 
 .logo {
     width: 80px;
-    /* margin-bottom: 30px; */
+    margin-bottom: 20px;
 
 }
 .col h2{
@@ -757,65 +764,6 @@ hr {
 
 
 /* Styling History Page */
-/* Timeline Section */
-/* .timeline-section {
-    padding: 80px 10%;
-    background-color: #fff;
-    text-align: center;
-}
-
-.timeline-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.timeline-intro {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 40px;
-}
-
-.timeline-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.timeline-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.timeline-card:hover {
-    transform: translateY(-10px);
-}
-
-.timeline-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.timeline-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.timeline-card p {
-    font-size: 14px;
-    color: #555;
-} */
 
 
 .timeline-title {
@@ -827,17 +775,19 @@ hr {
 
 .timeline-intro {
     font-size: 16px;
-    color: #777;
+    color: var(--secondary-text);
     margin-bottom: 40px;
     text-align: center;
 }
 
 .checkpoint h2 {
     margin-bottom: 0.5em;
+    color: #000;
 }
 
+
 .timeline p {
-    color: #555;
+    color: #333;
     font-size: 1.3rem;
     letter-spacing: 1px;
     word-spacing: 3px; 
@@ -859,7 +809,7 @@ hr {
     bottom: 0;
     left: 50%;
     width: 3px;
-    background: #272626;
+    background:var(--accent-color);
     transform: translateX(-50%);
 }
 
@@ -874,7 +824,7 @@ hr {
 }
 
 .checkpoint div {
-    border: 2px solid #272626;
+    border: 2px solid var(--accent-color);
     border-radius: 1em;
     padding: 1.5em;
     background: #fff;
@@ -915,7 +865,7 @@ hr {
 .checkpoint:nth-child(even) div::before {
     content: '';
     background: #fff;
-    box-shadow: 0 0 0.5em #4e89db;
+    box-shadow: 0 0 0.5em #db8b4e;
     width: 0.8em;
     height: 0.8em;
     position: absolute;
@@ -1012,7 +962,7 @@ hr {
     padding: 60px 10%;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.8;
 }
 
@@ -1024,7 +974,7 @@ hr {
 
 /* Styling About page */
 .about-this-page-header{
-    color: #fff;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1054,16 +1004,16 @@ hr {
     }
 
     .about-this-page-header h1 {
-        font-size: 28px; /* Reduce title size */
+        font-size: 28px; 
     }
 
     .about-this-page-header p {
-        font-size: 14px; /* Reduce paragraph size */
+        font-size: 14px; /* Reducing my  paragraph size */
         line-height: 1.6;
     }
 
     #SocialIconsAbout {
-        margin-top: 20px; /* Add spacing between text and social icons */
+        margin-top: 20px; /* I added spacing between text and social icons */
     }
 }
 
@@ -1192,9 +1142,9 @@ hr {
 .temple-section,
 .travel-section {
     padding: 80px 60px;
-    background-color: white;
+    background-color: var(--base-color);
     font-family: 'Lato', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 
 .temple-section h1,
@@ -1217,7 +1167,7 @@ hr {
 .temple-section .subheading,
 .travel-section .subheading {
     font-size: 16px;
-    color: #666;
+    color: var(--secondary-text);
     margin-bottom: 30px;
     border-bottom: 2px solid #c3492c;
     padding-bottom: 10px;
@@ -1335,9 +1285,9 @@ hr {
 /* Styling the festival section */
 .festival-section {
     padding: 80px 60px;
-    background-color: white;
+    background-color: var(--base-color);
     font-family: 'Lato', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 
 .cultural-page-title {
@@ -1349,7 +1299,7 @@ hr {
 
 .cultural-subtitle {
     font-size: 16px;
-    color: #777;
+    color: var(--secondary-text);
     margin-bottom: 30px;
     border-bottom: 2px solid #c3492c;
     padding-bottom: 10px;
@@ -1402,14 +1352,14 @@ hr {
 .culture-gallery-section {
     padding: 80px 60px;
     font-family: 'Lato', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 
 .cultural-gallery-section {
     padding: 80px 60px;
     background-color: white;
     font-family: 'Lato', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 .cultural-gallery {
     display: flex;
@@ -1445,12 +1395,13 @@ hr {
 .festival-card .image-credit,
 .cultural-card .image-credit,
 .map-container .image-credit,
-.travel-card .image-credit {
+.travel-card .image-credit,
+.temple-card .image-credit {
     line-height: 1.2;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 9.5px;
-    color: #666;
+    color: var(--secondary-text); 
     margin-bottom: 20px;
 }
 .festival-card h3,
@@ -1463,12 +1414,7 @@ p {
     text-align: justify;
 }
 
-/* .cultural-p-e {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 10px 20px;
 
-} */
 
 .etiquette-item {
   margin-bottom: 30px;
@@ -1498,13 +1444,15 @@ p {
 
   .festival-gallery,
   .cultural-gallery,
-  .travel-gallery {
+  .travel-gallery,
+  .temple-gallery {
     flex-direction: column;
   }
 
   .festival-card,
   .cultural-card,
-  .travel-card {
+  .travel-card, 
+  .temple-card{
     max-width: 100%;
   }
 
@@ -1523,14 +1471,16 @@ p {
 @media screen and (max-width: 992px) and (min-width: 601px) {
   .festival-gallery,
   .cultural-gallery
-  .travel-gallery {
+  .travel-gallery,
+  .temple-gallery {
     flex-wrap: wrap;
     
   }
 
   .festival-card,
   .cultural-card,
-  .travel-card {
+  .travel-card,
+  .temple-card {
     max-width: 48%;
   }
 
@@ -1543,7 +1493,8 @@ p {
   .festival-section,
   .cultural-dance-section,
   .culture-gallery-section
-  .travel-section {
+  .travel-section,
+  .temple-section {
     padding: 100px 100px;
   }
 }
