@@ -1181,7 +1181,7 @@ hr {
     gap: 20px;
     justify-content: space-between;
     margin-bottom: 40px;
-} */
+} 
 
  .temple-gallery img,
 .travel-gallery img {
@@ -1470,7 +1470,7 @@ p {
 /* For tablets */
 @media screen and (max-width: 992px) and (min-width: 601px) {
   .festival-gallery,
-  .cultural-gallery
+  .cultural-gallery,
   .travel-gallery,
   .temple-gallery {
     flex-wrap: wrap;
