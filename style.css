@@ -643,8 +643,8 @@ margin-top: 40px;
   background: #000;
 }
 
-.icons.emailIcon:hover .iconName {
-  background: #ff5e00;
+.icons.youtubeIcon:hover .iconName {
+  background: #ba1c1c;
 }
 
 /* Inner icon styling */
@@ -695,8 +695,8 @@ margin-top: 40px;
   background: #000;
 }
 
-.icon.email::before {
-  background: #ff5e00;
+.icon.youtube::before {
+  background: #ba1c1c;
 }
 
 #SocialIcons a {
