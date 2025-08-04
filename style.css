@@ -1561,7 +1561,7 @@ p {
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 770px) {
       nav ul {
       display: none;
       flex-direction: column;
